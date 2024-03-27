@@ -70,7 +70,6 @@ export type PostCover = PostCoverFormat & {
   };
 };
 
-
 export type PostAttributesData = {
   title: string;
   content: string;
