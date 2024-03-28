@@ -7,4 +7,8 @@ export const GlobalStyles = createGlobalStyle`
     outline: none;
     box-sizing: border-box;
   }
+
+  html{
+    font-size: 62.5%;
+  }
 `;
