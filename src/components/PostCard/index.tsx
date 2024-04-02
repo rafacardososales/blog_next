@@ -7,13 +7,19 @@ export type PostCardProps = {
   cover: string;
 };
 
-export const PostCard = () => {
+export const PostCard = ({ slug, title, cover }: PostCardProps) => {
   return (
     <Container>
       <PostCardCover>
-        <Link href="/post/[slug]" as={'/post/${slug}'}></Link>
+        <Link href="/post/[slug]" as={`/post/${slug}`}>
+          <img src={cover} alt={title} />
+        </Link>
       </PostCardCover>
-      <PostCardHeading></PostCardHeading>
+      <PostCardHeading>
+        <Link href="/post/[slug]" as={`/post/${slug}`}>
+          {title}
+        </Link>
+      </PostCardHeading>
     </Container>
   );
 };
