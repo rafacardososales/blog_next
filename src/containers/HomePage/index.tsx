@@ -16,7 +16,9 @@ export default function HomePage({ posts }: HomeaPagaProps) {
           {posts.map((post) => (
             <PostCard
               key={post.id}
-              cover={post.attributes.cover}
+              cover={post.attributes.cover.data
+                .map((element) => element.attributes.formats.small.url)
+                .toString()}
               slug={post.attributes.slug}
               title={post.attributes.title}
             />
