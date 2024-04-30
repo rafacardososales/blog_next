@@ -4,10 +4,11 @@ import { Header } from '@/src/components/Header';
 import { MainContainer } from '@/src/components/MainContainer';
 import { PostCard } from '@/src/components/PostCard';
 
-export type HomeaPagaProps = {
+export type HomePageProps = {
   posts: PostData[];
 };
-export default function HomePage({ posts }: HomeaPagaProps) {
+
+export default function HomePage({ posts }: HomePageProps) {
   return (
     <>
       <Header />
