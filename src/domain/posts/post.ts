@@ -36,12 +36,10 @@ export type PostCreatedBy = {
 };
 
 export type PostCover = {
-  data: [
-    {
-      id: PostID;
-      attributes: PostCoverAttributes;
-    },
-  ];
+  data: {
+    id: PostID;
+    attributes: PostCoverAttributes;
+  };
 };
 
 export type PostCoverFormat = {
