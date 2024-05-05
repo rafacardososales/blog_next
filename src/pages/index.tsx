@@ -1,13 +1,22 @@
-import { useEffect, useState } from 'react';
 import { PostData } from '../domain/posts/post';
 import { getAllPosts } from '../data/posts/get-all-posts';
 import HomePage from '../containers/HomePage';
+import { GetStaticProps } from 'next';
 
-export default function Home() {
-  const [posts, setPosts] = useState<PostData[]>([]);
-  useEffect(() => {
-    getAllPosts().then((response) => setPosts(response));
-  }, [posts]);
+export type HomeProps = {
+  posts: PostData[];
+};
 
-  return <HomePage posts={posts} />;
+export default function Home({ posts }: HomeProps) {
+  return <HomePage posts={posts}></HomePage>;
 }
+
+export const getStaticProps: GetStaticProps = async () => {
+  const posts = await getAllPosts(
+    '&sort=id:desc&pagination[start]=0&pagination[limit]=10',
+  );
+
+  return {
+    props: { posts },
+  };
+};
