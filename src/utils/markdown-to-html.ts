@@ -1,9 +1,7 @@
-import { unified } from 'unified';
-import remarkParse from 'remark-parse';
+import { remark } from 'remark';
 import remarkHtml from 'remark-html';
 
 export const markdownToHtml = async (content: string): Promise<string> => {
-  const processor = unified().use(remarkParse).use(remarkHtml);
-  const result = await processor.process(content);
-  return String(result);
+  const data = await remark().use(remarkHtml).process(content);
+  return String(data.value);
 };
