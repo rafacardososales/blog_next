@@ -30,7 +30,7 @@ export const Post = ({ post }: PostProps) => {
       <MainContainer>
         <Heading>{post.attributes.title}</Heading>
         <PostCover
-          coverUrl={post.attributes.cover.data.attributes.formats.small.url}
+          coverUrl={post.attributes.cover.data.attributes.formats.medium.url}
           alt={post.attributes.title}
         />
         <PostDetails
