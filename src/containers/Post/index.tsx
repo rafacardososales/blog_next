@@ -10,6 +10,7 @@ import { removeHtml } from '@/src/utils/remove-html';
 import { SITE_NAME } from '@/src/config/app-config';
 import { Heading } from '@/src/components/Heading';
 import { PostCover } from '@/src/components/PostCover';
+import { Comments } from '@/src/Comments';
 
 export type PostProps = {
   post: PostData;
@@ -39,6 +40,7 @@ export const Post = ({ post }: PostProps) => {
           date={post.attributes.createdAt}
         />
         <PostContainer content={post.attributes.content} />
+        <Comments title={post.attributes.title} slug={post.attributes.slug} />
       </MainContainer>
       <Footer />
     </>
