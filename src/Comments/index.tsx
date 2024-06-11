@@ -1,6 +1,5 @@
 import { DiscussionEmbed } from 'disqus-react';
 import { Container } from './styled';
-import { SITE_URL } from '../config/app-config';
 
 export type CommentsProps = {
   slug: string;
