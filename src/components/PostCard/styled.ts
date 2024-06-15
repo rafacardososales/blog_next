@@ -6,6 +6,9 @@ export const Container = styled.div`
   &:hover {
     opacity: 0.8;
   }
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+  overflow: hidden;
 `;
 
 export const PostCardCover = styled.div`
@@ -26,5 +29,7 @@ export const PostCardHeading = styled.h2`
     a {
       color: ${theme.colors.darkGray};
     }
+    text-align: center;
+    padding-bottom: 10px;
   `}
 `;
