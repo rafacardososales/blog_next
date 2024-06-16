@@ -14,7 +14,7 @@ export const Container = styled.div`
 export const PostCardCover = styled.div`
   margin-bottom: ${({ theme }) => theme.spacings.small};
   img {
-    max-width: 300px; /* largura máxima */
+    max-width: auto; /* largura máxima 300px*/
     max-height: 200px; /* altura máxima */
     width: 100%; /* largura ocupando 100% do contêiner pai */
     height: 200px;
