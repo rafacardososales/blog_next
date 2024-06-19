@@ -1,5 +1,4 @@
-export const API_URL =
-  'https://shrouded-plains-22485-333d22db38bc.herokuapp.com';
+export const API_URL = 'https://blogstrapi-production.up.railway.app/';
 
 export const POST_URL = `${API_URL}/api/posts?populate=*`;
 
