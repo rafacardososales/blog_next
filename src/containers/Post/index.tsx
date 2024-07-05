@@ -11,6 +11,7 @@ import { SITE_NAME } from '@/src/config/app-config';
 import { Heading } from '@/src/components/Heading';
 import { PostCover } from '@/src/components/PostCover';
 import { Comments } from '@/src/Comments';
+import { removeHtml } from '@/src/utils/remove-html';
 
 export type PostProps = {
   post: PostData;
@@ -23,10 +24,7 @@ export const Post = ({ post }: PostProps) => {
         <title>{post.attributes.title} - {SITE_NAME}</title>
         <meta
           name="description"
-          content="Descubra uma coleção irresistível de receitas
-         deliciosas para todos os gostos e ocasiões. Do simples ao sofisticado,
-          explore pratos que vão inspirar suas criações culinárias.
-           Encontre suas novas receitas favoritas aqui!"
+          content={removeHtml(post.attributes.content).slice(0, 150)}
         />
       </Head>
       <Header />
