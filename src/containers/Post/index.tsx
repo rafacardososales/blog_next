@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import Head from 'next/head';
 
 import { Footer } from '@/src/components/Footer';
@@ -6,7 +7,6 @@ import { MainContainer } from '@/src/components/MainContainer';
 import { PostContainer } from '@/src/components/PostContainer';
 import { PostDetails } from '@/src/components/PostDetails';
 import { PostData } from '@/src/domain/posts/post';
-import { removeHtml } from '@/src/utils/remove-html';
 import { SITE_NAME } from '@/src/config/app-config';
 import { Heading } from '@/src/components/Heading';
 import { PostCover } from '@/src/components/PostCover';
@@ -17,14 +17,16 @@ export type PostProps = {
 };
 
 export const Post = ({ post }: PostProps) => {
-  const postTitle = `${post.attributes.title} - ${SITE_NAME}`;
   return (
     <>
       <Head>
-        <title>{postTitle}</title>
+        <title>{post.attributes.title} - {SITE_NAME}</title>
         <meta
           name="description"
-          content={removeHtml(post.attributes.content).slice(0, 150)}
+          content="Descubra uma coleção irresistível de receitas
+         deliciosas para todos os gostos e ocasiões. Do simples ao sofisticado,
+          explore pratos que vão inspirar suas criações culinárias.
+           Encontre suas novas receitas favoritas aqui!"
         />
       </Head>
       <Header />
