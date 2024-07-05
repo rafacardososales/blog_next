@@ -16,11 +16,13 @@ export default function HomePage({ posts }: HomePageProps) {
     <>
       <Head>
         <title>{SITE_NAME}</title>
-        <meta name="description" content="Descubra uma coleção irresistível de receitas
+        <meta
+          name="description"
+          content="Descubra uma coleção irresistível de receitas
          deliciosas para todos os gostos e ocasiões. Do simples ao sofisticado,
           explore pratos que vão inspirar suas criações culinárias.
            Encontre suas novas receitas favoritas aqui!"
-           />
+        />
       </Head>
       <Header />
       <MainContainer>
