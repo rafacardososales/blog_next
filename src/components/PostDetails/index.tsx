@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import Link from 'next/link';
 import { Date } from '../Date';
 import { Container } from './styled';
@@ -12,7 +13,7 @@ export const PostDetails = ({ author, category, date }: PostDetailsProps) => {
   return (
     <Container>
       Publicado em <Date date={date} /> por {author} |{' '}
-      <Link href={`/category/${category}`}>{category}</Link>
+      <Link href={`/categories/${category.toLocaleLowerCase()}`}>{category}</Link>
     </Container>
   );
 };
