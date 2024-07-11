@@ -10,7 +10,7 @@ import { PostData } from '@/src/domain/posts/post';
 import { SITE_NAME } from '@/src/config/app-config';
 import { Heading } from '@/src/components/Heading';
 import { PostCover } from '@/src/components/PostCover';
-import { Comments } from '@/src/Comments';
+import { Comments } from '@/src/components/Comments';
 import { removeHtml } from '@/src/utils/remove-html';
 
 export type PostProps = {
