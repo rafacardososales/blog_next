@@ -40,6 +40,23 @@ export const IconList = styled.ul`
 `;
 
 export const IconItem = styled.li`
-  margin: 0 10px;
-  flex-direction: row;
+   margin: 0 20px;
+  text-align: center;
+
+  a {
+    display: inline-block;
+    text-align: center;
+  }
+
+  img {
+    display: block;
+    margin: 0 auto 10px;
+    width: 86px; /* Ajuste o tamanho conforme necessário */
+    height: 86px;
+  }
+
+  span {
+    display: block;
+    color: white;
+  }
 `;
