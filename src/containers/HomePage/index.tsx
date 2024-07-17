@@ -6,6 +6,7 @@ import { MainContainer } from '@/src/components/MainContainer';
 import { PostCard } from '@/src/components/PostCard';
 import { Footer } from '@/src/components/Footer';
 import { SITE_NAME } from '@/src/config/app-config';
+import { BannerTop } from '@/src/components/BannerTop/Index';
 
 export type HomePageProps = {
   posts: PostData[];
@@ -26,6 +27,7 @@ export default function HomePage({ posts, category }: HomePageProps) {
         />
       </Head>
       <Header />
+      <BannerTop />
       {category && <Category>Categoria: {category}</Category>}
       <MainContainer>
         <Container>
