@@ -17,6 +17,7 @@ export const GlobalStyles = createGlobalStyle`
     font-size: ${({ theme }) => theme.font.sizes.medium};
   }
 
+
   a {
     color: ${({ theme }) => theme.colors.secondary};
     text-decoration: none;
@@ -24,6 +25,7 @@ export const GlobalStyles = createGlobalStyle`
 
     &:hover{
         opacity: .6;
+        color: #F6522C;
     }
   }
 `;
