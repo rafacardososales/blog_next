@@ -47,8 +47,8 @@ export const IconItem = styled.li`
   img {
     display: block;
     margin: 0 auto 10px;
-    width: 86px;
-    height: 86px;
+    width: 60px;
+    height: 60px;
     color: aquamarine;
   }
 
@@ -86,5 +86,28 @@ export const Arrow = styled.img`
 
   &.right {
     right: 10px;
+  }
+`;
+
+
+
+export const BannerSlider = styled.div`
+  background: transparent;
+  width: 60%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0 auto;
+
+  @media (max-width: 768px) {
+    width: 80%;
+  }
+
+  @media (max-width: 480px) {
+    width: 48%;
+    justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0 auto;
   }
 `;

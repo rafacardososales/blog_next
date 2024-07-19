@@ -1,6 +1,6 @@
 /* eslint-disable prettier/prettier */
 import Slider from 'react-slick';
-import { BannerContent, Banner, IconItem } from './styled';
+import { BannerContent, Banner, IconItem, BannerSlider } from './styled';
 import Link from 'next/link';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -12,8 +12,9 @@ export const settings = {
     dots: false,
     infinite: true,
     cssEase: 'ease',
-    focusOnSelect: false,
+    focusOnSelect: true,
     speed: 500,
+    swipe: true,
     slidesToShow: 5,
     slidesToScroll: 1,
     initialSlide: 0,
@@ -56,7 +57,7 @@ export const settings = {
 export const BannerTop = () => (
   <Banner>
     <BannerContent>
-
+        <BannerSlider>
         <Slider {...settings}>
         <IconItem>
           <Link href="/categories/aves">
@@ -107,7 +108,7 @@ export const BannerTop = () => (
           </Link>
         </IconItem>
         </Slider>
-
+        </BannerSlider>
     </BannerContent>
   </Banner>
 );
