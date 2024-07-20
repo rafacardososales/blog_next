@@ -1,4 +1,21 @@
-import styled from 'styled-components';
+/* eslint-disable prettier/prettier */
+import styled, { css } from 'styled-components';
+
+export const MainContainerCategory = styled.div`
+    ${({ theme }) => css`
+    font-size: ${theme.font.sizes.medium};
+    padding: ${theme.spacings.medium};
+  `}
+  width: 100%;
+  height: 100vh;
+  background-color: #373737;
+  display: block;
+  justify-content: center;
+  overflow: auto;
+
+`;
+
+
 
 export const Container = styled.div`
   display: grid;

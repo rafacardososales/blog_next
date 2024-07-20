@@ -27,7 +27,7 @@ export const PostCardHeading = styled.h2`
     font-size: ${theme.font.sizes.medium};
 
     a {
-      color: ${theme.colors.darkGray};
+      color: white;
     }
     text-align: center;
     padding-bottom: 10px;

@@ -1,9 +1,6 @@
 /* eslint-disable prettier/prettier */
 import Head from 'next/head';
-
-import { Footer } from '@/src/components/Footer';
 import { Header } from '@/src/components/Header';
-import { MainContainer } from '@/src/components/MainContainer';
 import { PostContainer } from '@/src/components/PostContainer';
 import { PostDetails } from '@/src/components/PostDetails';
 import { PostData } from '@/src/domain/posts/post';
@@ -12,6 +9,7 @@ import { Heading } from '@/src/components/Heading';
 import { PostCover } from '@/src/components/PostCover';
 import { Comments } from '@/src/components/Comments';
 import { removeHtml } from '@/src/utils/remove-html';
+import { Container } from './styled';
 
 export type PostProps = {
   post: PostData;
@@ -28,7 +26,7 @@ export const Post = ({ post }: PostProps) => {
         />
       </Head>
       <Header />
-      <MainContainer>
+      <Container>
         <Heading>{post.attributes.title}</Heading>
         <PostCover
           coverUrl={post.attributes.cover.data.attributes.formats.medium.url}
@@ -41,8 +39,8 @@ export const Post = ({ post }: PostProps) => {
         />
         <PostContainer content={post.attributes.content} />
         <Comments title={post.attributes.title} slug={post.attributes.slug} />
-      </MainContainer>
-      <Footer />
+      </Container>
+
     </>
   );
 };

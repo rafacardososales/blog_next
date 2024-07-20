@@ -1,4 +1,4 @@
-import HomePage from '@/src/containers/HomePage';
+import CategoryPage from '@/src/containers/CategoryPage/Index';
 import { getAllPosts } from '@/src/data/posts/get-all-posts';
 import { PostData } from '@/src/domain/posts/post';
 import { GetServerSideProps } from 'next';
@@ -9,7 +9,7 @@ export type CategoryProps = {
 };
 
 export default function Category({ posts, category }: CategoryProps) {
-  return <HomePage category={category} posts={posts} />;
+  return <CategoryPage category={category} posts={posts} />;
 }
 
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
