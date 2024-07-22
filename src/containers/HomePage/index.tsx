@@ -7,6 +7,8 @@ import { PostCard } from '@/src/components/PostCard';
 import { Footer } from '@/src/components/Footer';
 import { SITE_NAME } from '@/src/config/app-config';
 import { BannerTop } from '@/src/components/BannerTop/Index';
+import AnimatedPage from '@/src/components/PageTransition';
+import { SearchBottom } from '@/src/components/SearchBottom';
 
 export type HomePageProps = {
   posts: PostData[];
@@ -16,32 +18,35 @@ export type HomePageProps = {
 export default function HomePage({ posts, category }: HomePageProps) {
   return (
     <>
-      <Head>
-        <title>{category ? `${category} - ${SITE_NAME}` : SITE_NAME}</title>
-        <meta
-          name="description"
-          content="Descubra uma coleção irresistível de receitas
+      <AnimatedPage>
+        <Head>
+          <title>{category ? `${category} - ${SITE_NAME}` : SITE_NAME}</title>
+          <meta
+            name="description"
+            content="Descubra uma coleção irresistível de receitas
          deliciosas para todos os gostos e ocasiões. Do simples ao sofisticado,
           explore pratos que vão inspirar suas criações culinárias.
            Encontre suas novas receitas favoritas aqui!"
-        />
-      </Head>
-      <Header />
-      <BannerTop />
-      {category && <Category>Categoria: {category}</Category>}
-      <MainContainer>
-        <Container>
-          {posts.map((post) => (
-            <PostCard
-              key={post.id}
-              cover={post.attributes.cover.data.attributes.formats.small.url}
-              slug={post.attributes.slug}
-              title={post.attributes.title}
-            />
-          ))}
-        </Container>
-      </MainContainer>
-      <Footer />
+          />
+        </Head>
+        <Header />
+        <BannerTop />
+        {category && <Category>Categoria: {category}</Category>}
+        <MainContainer>
+          <Container>
+            {posts.map((post) => (
+              <PostCard
+                key={post.id}
+                cover={post.attributes.cover.data.attributes.formats.small.url}
+                slug={post.attributes.slug}
+                title={post.attributes.title}
+              />
+            ))}
+          </Container>
+          <SearchBottom />
+        </MainContainer>
+        <Footer />
+      </AnimatedPage>
     </>
   );
 }

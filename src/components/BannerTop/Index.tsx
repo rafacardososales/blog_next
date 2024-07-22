@@ -19,8 +19,6 @@ export const settings = {
     initialSlide: 0,
     centerMode: true,
     centerPadding: '0px',
-    nextArrow: <img src="/ArrowRight.svg" alt="Next" />,
-    prevArrow: <img src="/ArrowLeft.svg" alt="Previous" />,
     responsive: [
       {
         breakpoint: 1024,

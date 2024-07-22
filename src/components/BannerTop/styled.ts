@@ -36,7 +36,6 @@ export const IconList = styled.ul`
 `;
 
 export const IconItem = styled.li`
-  margin: 0 20px;
   text-align: center;
 
   a {

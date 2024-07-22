@@ -1,11 +1,10 @@
 /* eslint-disable prettier/prettier */
 import React from 'react';
-import { Container1, MainContainer, SearchBarContainer, SearchInput, TagContainer, TagLink, Title } from './styled';
+import { Container1, SearchBarContainer, SearchInput, TagContainer, TagLink, Title } from './styled';
 import Link from 'next/link';
 
 export const SearchBottom = () => {
   return (
-    <MainContainer>
     <Container1>
       <Title>Qual é a receita de hoje?</Title>
       <SearchBarContainer>
@@ -41,6 +40,5 @@ export const SearchBottom = () => {
         </Link>
       </TagContainer>
     </Container1>
-    </MainContainer>
   );
 };
