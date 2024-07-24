@@ -9,6 +9,8 @@ import { SITE_NAME } from '@/src/config/app-config';
 import { BannerTop } from '@/src/components/BannerTop/Index';
 import AnimatedPage from '@/src/components/PageTransition';
 import { SearchBottom } from '@/src/components/SearchBottom';
+import { SliderDrink } from '@/src/components/SliderDrinks';
+import { SliderBanner } from '@/src/components/SliderBanner/Index';
 
 export type HomePageProps = {
   posts: PostData[];
@@ -43,6 +45,8 @@ export default function HomePage({ posts, category }: HomePageProps) {
               />
             ))}
           </Container>
+          <SliderBanner />
+          <SliderDrink />
           <SearchBottom />
         </MainContainer>
         <Footer />

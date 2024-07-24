@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import styled, { css } from 'styled-components';
 
 export const Container = styled.div`
@@ -9,7 +10,7 @@ export const Container = styled.div`
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
   border-radius: 20px;
   overflow: hidden;
-  margin-top: 5rem;
+  margin-top: 2rem;
 `;
 
 export const PostCardCover = styled.div`

@@ -9,27 +9,27 @@ export const Container1 = styled.div`
     padding: ${theme.spacings.medium};
     background-color: #292929; /* Cor de fundo do container */
     border-radius: 15px;
-    padding: 20px;
-    height: 30rem;
     margin-top: 5rem;
     margin-bottom: 5rem;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; /* Alinha à esquerda */
-    align-items: flex-start; /* Alinha à esquerda */
+    justify-content: center; /* Alinha o conteúdo verticalmente ao centro */
+    align-items: center; /* Alinha o conteúdo horizontalmente ao centro */
   `}
+
   @media (max-width: 1200px) {
-    height: 35rem;
-  }
-  @media (max-width: 992px) {
-    height: 30rem;
     padding: 15px;
   }
-  @media (max-width: 768px) {
-    height: auto;
+
+  @media (max-width: 992px) {
     padding: 10px;
     width: 90%;
   }
+
+  @media (max-width: 768px) {
+    width: 90%;
+  }
+
   @media (max-width: 576px) {
     width: 100%;
     padding: 5px;
@@ -87,8 +87,9 @@ export const TagContainer = styled.div`
     background-color: #e74c3c; /* Cor de fundo dos botões */
     color: white;
     border: none;
+    font-size: 1.3rem;
     border-radius: 15px;
-    padding: 10px 20px;
+    padding: 5px 20px;
     cursor: pointer;
     text-decoration: none;
     transition: background-color 0.3s;
@@ -121,12 +122,11 @@ export const Tag = styled.button`
   }
 `;
 
-export const TagLink = styled.a`
-  background-color: #e74c3c; /* Cor de fundo dos botões */
+export const TagLink = styled.p`
   color: white;
   border: none;
   border-radius: 15px;
-  padding: 10px 20px;
+  padding: 2px 20px;
   cursor: pointer;
   text-decoration: none;
   transition: background-color 0.3s;
