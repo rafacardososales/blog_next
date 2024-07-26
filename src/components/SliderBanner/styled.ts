@@ -20,8 +20,17 @@ export const BannerImage = styled.img`
 `;
 
 export const BannerContent = styled.div`
-  background: transparent;/* Aplicar desfoque para efeito fosco */
+  background: transparent; /* Aplicar desfoque para efeito fosco */
   padding: 8rem;
+
+  @media (max-width: 768px) {
+    padding: 4rem;
+    display: none;
+  }
+
+  @media (max-width: 480px) {
+    padding: 2rem;
+  }
 `;
 
 export const IconList = styled.ul`
@@ -34,11 +43,13 @@ export const IconList = styled.ul`
 `;
 
 export const IconItem = styled.li`
+  position: relative;
   text-align: center;
 
   a {
     display: inline-block;
     text-align: center;
+    position: relative;
   }
 
   img {
@@ -46,42 +57,41 @@ export const IconItem = styled.li`
     object-fit: cover;
     margin: 0 auto 10px;
     width: 48rem;
-    height: 35rem; /* Faz a altura se ajustar automaticamente */
+    height: 35rem;
     color: aquamarine;
     border-radius: 20%;
 
     @media (max-width: 768px) {
-      width: 25rem;
-      height: 20rem
+      width: 36rem;
+      height: 26.25rem; /* Mantém a proporção */
     }
 
     @media (max-width: 480px) {
-      width: 20rem;
-      height: 18rem;
+      width: 24rem;
+      height: 17.5rem; /* Mantém a proporção */
     }
   }
-
 
   span {
     display: block;
     color: white;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente */
+    padding: 10px 0; /* Ajuste conforme necessário */
+    text-align: center;
+    border-radius: 0 0 40% 40%; /* Bordas arredondadas combinando com a imagem */
+    margin-bottom: 1.0rem;
+    overflow: hidden; /* Adicionado */
+    max-width: 100%; /* Adicionado */
   }
-  span:hover{
+
+  span:hover {
     color: #F6522C;
   }
-
-  .Arrow {
-    height: 42px;
-    width: 25px;
-    display: block;
-    margin-top: 20px;
-  }
-
 `;
-
-
-
-
 
 export const Arrow = styled.img`
   position: absolute;
@@ -99,8 +109,6 @@ export const Arrow = styled.img`
   }
 `;
 
-
-
 export const BannerSlider = styled.div`
   background: transparent;
   width: 100%;
@@ -110,14 +118,14 @@ export const BannerSlider = styled.div`
   margin: 0 auto;
 
   @media (max-width: 768px) {
-    width: 99%;
+    width: 95%;
   }
 
   @media (max-width: 480px) {
-    width: 99%;
+    width: 100%;
     justify-content: center;
-  align-items: center;
-  text-align: center;
-  margin: 0 auto;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
   }
 `;

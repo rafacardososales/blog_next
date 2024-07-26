@@ -20,8 +20,19 @@ export const BannerImage = styled.img`
 `;
 
 export const BannerContent = styled.div`
-  background: transparent;/* Aplicar desfoque para efeito fosco */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Aplicar desfoque para efeito fosco */
   padding: 8rem;
+  h5 {
+    margin: 0;
+    padding: 10px;
+    font-size: 2rem; /* Aumentar tamanho da fonte */
+    color: #F6522C;
+    border-radius: 5px;
+    margin-left: 10rem;
+    margin-bottom: 2rem;
+  }
 `;
 
 export const IconList = styled.ul`
@@ -30,7 +41,7 @@ export const IconList = styled.ul`
   list-style-type: none;
   padding: 0;
   justify-content: center;
-  margin-top: 20px;
+  margin-top: 2px;
 `;
 
 export const IconItem = styled.li`
@@ -43,7 +54,7 @@ export const IconItem = styled.li`
 
   img {
     display: block;
-  object-fit: cover;
+    object-fit: cover;
     margin: 0 auto 10px;
     width: 180px;
     height: 180px;
@@ -55,8 +66,8 @@ export const IconItem = styled.li`
     display: block;
     color: white;
   }
-  span:hover{
-    color: #F6522C;
+  span:hover {
+    color: #f6522c;
   }
 
   .Arrow {
@@ -65,12 +76,7 @@ export const IconItem = styled.li`
     display: block;
     margin-top: 20px;
   }
-
 `;
-
-
-
-
 
 export const Arrow = styled.img`
   position: absolute;
@@ -88,8 +94,6 @@ export const Arrow = styled.img`
   }
 `;
 
-
-
 export const BannerSlider = styled.div`
   background: transparent;
   width: 95%;
@@ -105,8 +109,8 @@ export const BannerSlider = styled.div`
   @media (max-width: 480px) {
     width: 90%;
     justify-content: center;
-  align-items: center;
-  text-align: center;
-  margin: 0 auto;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
   }
 `;

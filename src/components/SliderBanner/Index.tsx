@@ -30,25 +30,26 @@ export const settings = {
     focusOnSelect: true,
     centerMode: true,
     arrows: false,
-    centerPadding: '0px',
+    centerPadding: '60px',
     responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          centerMode: true,
-          slidesToShow: 2,
-          slidesToScroll: 1,
-          infinite: true,
-          dots: false,
-        },
-      },
+        {
+            breakpoint: 1024,
+            settings: {
+              centerMode: true,
+              slidesToShow: 1,
+              slidesToScroll: 1,
+              infinite: true,
+              dots: false,
+              centerPadding: '80px',
+            },
+          },
       {
         breakpoint: 600,
         settings: {
           centerMode: true,
           slidesToShow: 1,
           slidesToScroll: 1,
-          initialSlide: 2,
+          initialSlide: 1,
         },
       },
       {

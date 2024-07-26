@@ -11,6 +11,7 @@ import AnimatedPage from '@/src/components/PageTransition';
 import { SearchBottom } from '@/src/components/SearchBottom';
 import { SliderDrink } from '@/src/components/SliderDrinks';
 import { SliderBanner } from '@/src/components/SliderBanner/Index';
+import { BannerSazonal } from '@/src/components/BannerSazonal';
 
 export type HomePageProps = {
   posts: PostData[];
@@ -45,6 +46,7 @@ export default function HomePage({ posts, category }: HomePageProps) {
               />
             ))}
           </Container>
+          <BannerSazonal />
           <SliderBanner />
           <SliderDrink />
           <SearchBottom />
