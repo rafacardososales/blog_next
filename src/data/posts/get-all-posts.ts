@@ -3,7 +3,7 @@ import { PostData } from '@/src/domain/posts/post';
 import { fetchJson } from '@/src/utils/fetch-json';
 
 export const getAllPosts = async (query = ''): Promise<PostData[]> => {
-  const url = `${POST_URL}${query}`;
+  const url = `${POST_URL}populate=*${query}`;
   const posts = await fetchJson<PostData[]>(url);
   return posts;
 };

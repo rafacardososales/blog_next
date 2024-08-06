@@ -12,10 +12,12 @@ import { SearchBottom } from '@/src/components/SearchBottom';
 import { SliderDrink } from '@/src/components/SliderDrinks';
 import { SliderBanner } from '@/src/components/SliderBanner/Index';
 import { BannerSazonal } from '@/src/components/BannerSazonal';
+import { PaginationData } from '@/src/domain/posts/pagination';
 
 export type HomePageProps = {
   posts: PostData[];
   category?: string;
+  pagination: PaginationData;
 };
 
 export default function HomePage({ posts, category }: HomePageProps) {

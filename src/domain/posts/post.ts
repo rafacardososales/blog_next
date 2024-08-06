@@ -4,6 +4,14 @@ export type PostAuthor = {
   data: {
     id: PostID;
     attributes: AuthorAttributesData;
+    meta: {
+      pagination: {
+        page: string;
+        pageSize: string;
+        pageCount: string;
+        total: string;
+      };
+    };
   };
 };
 
@@ -39,6 +47,14 @@ export type PostCover = {
   data: {
     id: PostID;
     attributes: PostCoverAttributes;
+  };
+  meta: {
+    pagination: {
+      page: string;
+      pageSize: string;
+      pageCount: string;
+      total: string;
+    };
   };
 };
 

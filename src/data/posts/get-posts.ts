@@ -7,7 +7,7 @@ export const getPost = async (
   slug: string | string[] | undefined,
 ): Promise<PostData[]> => {
   const slugString = Array.isArray(slug) ? slug[0] : slug;
-  const url = `${POST_URL}&filters[slug][$eq]=${slugString}`;
+  const url = `${POST_URL}populate=*&filters[slug][$eq]=${slugString}`;
 
   const jsonPost = await fetchJson<PostData[]>(url);
 
