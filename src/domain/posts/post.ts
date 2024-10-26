@@ -1,110 +1,98 @@
 export type PostID = number;
 
-export type PostAuthor = {
-  data: {
-    id: PostID;
-    attributes: AuthorAttributesData;
-    meta: {
-      pagination: {
-        page: string;
-        pageSize: string;
-        pageCount: string;
-        total: string;
-      };
-    };
-  };
-};
-
-export type AuthorAttributesData = {
-  name: string;
-  createdAt: string;
-  updatedAt: string;
-  publishAt: string;
-};
-
-export type PostCategory = {
-  data: {
-    id: PostID;
-    attributes: CategoryAttributesData;
-  };
-};
-
-export type CategoryAttributesData = {
-  name: string;
-  createdAt: string;
-  updatedAt: string;
-  publishAt: string;
-};
-
-export type PostCreatedBy = {
-  id: PostID;
-  firstname: string;
-  lastname: string;
-  username: null;
-};
-
-export type PostCover = {
-  data: {
-    id: PostID;
-    attributes: PostCoverAttributes;
-  };
-  meta: {
-    pagination: {
-      page: string;
-      pageSize: string;
-      pageCount: string;
-      total: string;
-    };
-  };
-};
-
 export type PostCoverFormat = {
   ext: string;
   url: string;
   hash: string;
   mime: string;
   name: string;
-  path: null;
+  path: null | string;
   size: number;
   width: number;
   height: number;
+  sizeInBytes: number;
   provider_metadata: {
     public_id: string;
     resource_type: string;
   };
 };
 
-export type PostCoverAttributes = {
-  alternativeText: string;
-  caption: string;
-  previewUrl: null;
-  provider: string;
-  created_by: number;
-  updated_by: number;
-  createdAt: string;
-  updatedAt: string;
+export type PostCover = {
+  id: PostID;
+  documentId: string;
+  name: string;
+  alternativeText: null | string;
+  caption: null | string;
+  width: number;
+  height: number;
   formats: {
     thumbnail: PostCoverFormat;
     small: PostCoverFormat;
     medium: PostCoverFormat;
-    large: PostCoverFormat;
   };
-};
-
-export type PostAttributesData = {
-  title: string;
-  content: string;
-  slug: string;
-  author: PostAuthor;
-  category: PostCategory;
-  created_by: PostCreatedBy;
-  updated_by: PostCreatedBy;
+  hash: string;
+  ext: string;
+  mime: string;
+  size: number;
+  url: string;
+  previewUrl: null | string;
+  provider: string;
+  provider_metadata: {
+    public_id: string;
+    resource_type: string;
+  };
   createdAt: string;
   updatedAt: string;
-  cover: PostCover;
+  publishedAt: string;
+  locale: null | string;
+};
+
+export type PostAuthor = {
+  id: PostID;
+  documentId: string;
+  name: string;
+  createdAt: string;
+  updatedAt: string;
+  publishedAt: string;
+  locale: null | string;
+};
+
+export type PostCategory = {
+  id: PostID;
+  documentId: string;
+  name: string;
+  createdAt: string;
+  updatedAt: string;
+  publishedAt: string;
+  locale: null | string;
 };
 
 export type PostData = {
   id: PostID;
-  attributes: PostAttributesData;
+  documentId: string;
+  title: string;
+  content: string;
+  slug: string;
+  createdAt: string;
+  updatedAt: string;
+  publishedAt: string;
+  locale: null | string;
+  cover: PostCover;
+  author: PostAuthor;
+  category: PostCategory;
+  localizations: unknown[]; // Ajuste para localizações, se necessário
+};
+
+export type ApiResponseMeta = {
+  pagination: {
+    page: number;
+    pageSize: number;
+    pageCount: number;
+    total: number;
+  };
+};
+
+export type ApiResponse = {
+  data: PostData[];
+  meta: ApiResponseMeta;
 };

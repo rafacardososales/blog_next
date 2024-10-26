@@ -11,21 +11,21 @@ export const getPost = async (
 
   const jsonPost = await fetchJson<PostData[]>(url);
 
-  if (jsonPost && jsonPost[0] && jsonPost[0].attributes.content) {
+  if (jsonPost && jsonPost[0] && jsonPost[0].content) {
     let content = '';
 
     // Caso o conteúdo seja um array de objetos
-    if (Array.isArray(jsonPost[0].attributes.content)) {
-      for (const item of jsonPost[0].attributes.content) {
+    if (Array.isArray(jsonPost[0].content)) {
+      for (const item of jsonPost[0].content) {
         content += await markdownToHtml(item.text);
       }
     } else {
       // Caso o conteúdo não seja um array
-      content = await markdownToHtml(jsonPost[0].attributes.content);
+      content = await markdownToHtml(jsonPost[0].content);
     }
 
     const finalContent = { ...jsonPost[0] };
-    finalContent.attributes.content = content;
+    finalContent.content = content;
 
     return [finalContent];
   }

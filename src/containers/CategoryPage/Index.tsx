@@ -31,9 +31,9 @@ export default function CategoryPage({ posts, category }: HomePageProps) {
           {posts.map((post) => (
             <PostCard
               key={post.id}
-              cover={post.attributes.cover.data.attributes.formats.small.url}
-              slug={post.attributes.slug}
-              title={post.attributes.title}
+              cover={post.cover.formats.small.url}
+              slug={post.slug}
+              title={post.title}
             />
           ))}
         </Container>

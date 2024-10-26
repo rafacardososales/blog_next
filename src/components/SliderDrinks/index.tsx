@@ -64,43 +64,43 @@ export const SliderDrink = () => (
           </Link>
         </IconItem>
         <IconItem>
-          <Link href="/categories/Carnes">
+          <Link href="/categories/Bebidas">
             <img src="drinks/caipirinha.jpeg" alt="Carnes" />
             <span>Caipirinha</span>
           </Link>
         </IconItem>
         <IconItem>
-          <Link href="/categories/Massas">
+          <Link href="/categories/Bebidas">
             <img src="drinks/Dry Martini.jpeg" alt="Massas" />
             <span>Dry Martini</span>
           </Link>
         </IconItem>
         <IconItem>
-          <Link href="/categories/Saudavel">
+          <Link href="/categories/Bebidas">
             <img src="/drinks/margarita.jpeg" alt="Saudavel" />
             <span>Margarita</span>
           </Link>
         </IconItem>
         <IconItem>
-          <Link href="/categories/Sobremesa">
+          <Link href="/categories/Bebidas">
             <img src="drinks/mojito.jpeg" alt="Sobremesa" />
             <span>Mojito</span>
           </Link>
         </IconItem>
         <IconItem>
-          <Link href="/categories/Bolos e Tortas">
+          <Link href="/categories/Bebidas">
             <img src="drinks/moscow mule.jpg" alt="BolorsTotas" />
             <span>Moscow Mule</span>
           </Link>
         </IconItem>
         <IconItem>
-          <Link href="/categories/Drinks">
+          <Link href="/categories/Bebidas">
             <img src="drinks/negroni.jpg" alt="Drinks" />
             <span>Negroni</span>
           </Link>
         </IconItem>
         <IconItem>
-          <Link href="/categories/Salgados">
+          <Link href="/categories/Bebidas">
             <img src="drinks/Old Fashioned.jpeg" alt="Salgados" />
             <span>Old Fashioned</span>
           </Link>

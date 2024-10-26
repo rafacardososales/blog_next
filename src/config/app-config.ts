@@ -1,4 +1,4 @@
-export const API_URL = 'https://blogstrapi-production.up.railway.app';
+export const API_URL = 'https://strapiblog.cheffyreceitas.com.br';
 
 export const POST_URL = `${API_URL}/api/posts?`;
 

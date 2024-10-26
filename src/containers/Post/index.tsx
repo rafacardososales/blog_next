@@ -19,26 +19,26 @@ export const Post = ({ post }: PostProps) => {
   return (
     <>
       <Head>
-        <title>{post.attributes.title} - {SITE_NAME}</title>
+        <title>{post.title} - {SITE_NAME}</title>
         <meta
           name="description"
-          content={removeHtml(post.attributes.content).slice(0, 150)}
+          content={removeHtml(post.content).slice(0, 150)}
         />
       </Head>
       <Header />
       <Container>
-        <Heading>{post.attributes.title}</Heading>
+        <Heading>{post.title}</Heading>
         <PostCover
-          coverUrl={post.attributes.cover.data.attributes.formats.medium.url}
-          alt={post.attributes.title}
+          coverUrl={post.cover.formats.medium.url}
+          alt={post.title}
         />
         <PostDetails
-          author={post.attributes.author.data.attributes.name}
-          category={post.attributes.category.data.attributes.name}
-          date={post.attributes.createdAt}
+          author={post.author.name}
+          category={post.category.name}
+          date={post.createdAt}
         />
-        <PostContainer content={post.attributes.content} />
-        <Comments title={post.attributes.title} slug={post.attributes.slug} />
+        <PostContainer content={post.content} />
+        <Comments title={post.title} slug={post.slug} />
       </Container>
 
     </>
