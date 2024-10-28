@@ -52,13 +52,13 @@ export const settings = {
 export const SliderDrink = () => (
   <Banner>
     <BannerContent>
-        <Link href="/categories/aves">
+        <Link href="/categories/Bebidas">
         <h5>Drinks do momento</h5>
         </Link>
         <BannerSlider>
         <Slider {...settings}>
         <IconItem>
-          <Link href="/categories/aves">
+          <Link href="/categories/Bebidas">
             <img src="drinks/blood mary.jpeg" alt="Blood Mary" />
             <span>Blood Mary</span>
           </Link>

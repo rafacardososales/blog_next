@@ -8,7 +8,7 @@ export const BannerSazonal = () => {
     return (
       <BannerWrapper>
         <TextContainer>
-          <h1>Dica de <br></br><span style={{ color: "#ff4500" }}>Lanches fáceis</span></h1>
+          <h1>Dica de <br></br><p style={{ color: "#ff4500" }}>Lanches fáceis</p></h1>
           <p>Comidas para fazer...</p>
           <button>SAIBA MAIS {">"}</button>
         </TextContainer>

@@ -52,6 +52,7 @@ export const settings = {
 
 export const BannerTop = () => (
   <Banner>
+    <img className='imgBanner' src="bannertop.png" alt="" />
     <BannerContent>
         <BannerSlider>
         <Slider {...settings}>

@@ -8,15 +8,18 @@ export const Container = styled.header`
     padding: ${theme.spacings.medium};
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    text-align: center;
   `}
 
-  img {
+  #logo {
     color: ${({ theme }) => theme.colors.white};
     height: 40px;
     width: 80px;
     margin-left: 80px;
+  }
+  img {
+    color: ${({ theme }) => theme.colors.white};
+    height: 40px;
+    width: 80px;
   }
 
   input {
@@ -26,7 +29,7 @@ export const Container = styled.header`
     border-radius: 30px;
     background: white;
     color: black;
-    width: 300px;
+    width: 600px;
   }
 
   input:focus {

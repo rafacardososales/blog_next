@@ -3,16 +3,25 @@ import styled from 'styled-components';
 
 export const Banner = styled.div`
   width: 100%;
-  background-image: url('bannertop.png');
-  background-size: fill;
-  background-position: center;
   height: 100%;
   display: block;
   align-items: center;
   justify-content: center;
   color: white;
   text-align: center;
+  position: relative;
+
+  .imgBanner{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
 `;
+
+
 
 export const BannerImage = styled.img`
   width: 100%;

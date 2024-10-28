@@ -19,7 +19,7 @@ import Link from "next/link";
 
 
 export const settings = {
-    dots: false,
+    dots: true,
     infinite: true,
     speed: 800,
     slidesToShow: 3,
@@ -36,7 +36,7 @@ export const settings = {
             breakpoint: 1024,
             settings: {
               centerMode: true,
-              slidesToShow: 1,
+              slidesToShow: 2,
               slidesToScroll: 1,
               infinite: true,
               dots: false,

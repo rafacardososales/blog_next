@@ -12,6 +12,7 @@ import { SearchBottom } from '@/src/components/SearchBottom';
 import { SliderDrink } from '@/src/components/SliderDrinks';
 import { SliderBanner } from '@/src/components/SliderBanner/Index';
 import { BannerSazonal } from '@/src/components/BannerSazonal';
+import { SliderBannerTop } from '@/src/components/SliderBannerTop';
 
 export type HomePageProps = {
   posts: PostData[];
@@ -36,6 +37,8 @@ export default function HomePage({ posts, category }: HomePageProps) {
         <BannerTop />
         {category && <Category>Categoria: {category}</Category>}
         <MainContainer>
+          <SliderBanner />
+          <SliderBannerTop />
           <Container>
             {posts.map((post) => (
               <PostCard
@@ -47,7 +50,6 @@ export default function HomePage({ posts, category }: HomePageProps) {
             ))}
           </Container>
           <BannerSazonal />
-          <SliderBanner />
           <SliderDrink />
           <SearchBottom />
         </MainContainer>

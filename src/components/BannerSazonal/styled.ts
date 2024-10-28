@@ -7,7 +7,7 @@ export const BannerWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 80%;
+  width: 74%;
   height: 100%;
   margin-top: 6rem;
   overflow: auto;
@@ -35,7 +35,7 @@ margin-left: 5.5rem;
   }
 
   p {
-    font-size: 2rem;
+    font-size:3rem;
     margin-top: 0.8rem;
     color: #666;
   }

@@ -2,7 +2,7 @@
 import styled from 'styled-components';
 
 export const Banner = styled.div`
-  width: 100%;
+  width: 90%;
   background-size: fill;
   background-position: center;
   height: 100%;
@@ -11,6 +11,14 @@ export const Banner = styled.div`
   justify-content: center;
   color: white;
   text-align: center;
+
+  @media (max-width: 480px) {
+    display: none;
+  }
+
+  @media (max-width: 1024px) {
+    display: none;
+  }
 `;
 
 export const BannerImage = styled.img`
@@ -103,11 +111,11 @@ export const BannerSlider = styled.div`
   margin: 0 auto;
 
   @media (max-width: 768px) {
-    width: 95%;
+    width: 100%;
   }
 
   @media (max-width: 480px) {
-    width: 90%;
+    width: 100%;
     justify-content: center;
     align-items: center;
     text-align: center;

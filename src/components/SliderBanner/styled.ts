@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 export const Banner = styled.div`
   width: 100%;
-  background-size: fill;
+  background-size: cover;
   background-position: center;
   height: 100%;
   display: block;
@@ -11,6 +11,7 @@ export const Banner = styled.div`
   justify-content: center;
   color: white;
   text-align: center;
+  overflow: hidden;
 `;
 
 export const BannerImage = styled.img`
@@ -20,16 +21,20 @@ export const BannerImage = styled.img`
 `;
 
 export const BannerContent = styled.div`
-  background: transparent; /* Aplicar desfoque para efeito fosco */
-  padding: 8rem;
+  background: transparent;
+
+  @media (max-width: 1024px) {
+    padding: 3rem;
+  }
 
   @media (max-width: 768px) {
-    padding: 4rem;
+    padding: 2rem;
     display: none;
   }
 
   @media (max-width: 480px) {
-    padding: 2rem;
+    padding: 1rem;
+    display: none;
   }
 `;
 
@@ -37,14 +42,18 @@ export const IconList = styled.ul`
   display: flex;
   flex-direction: row;
   list-style-type: none;
-  padding: 0;
   justify-content: center;
   margin-top: 20px;
+  padding: 0;
+  flex-wrap: wrap; /* Permite que os ícones se ajustem para telas menores */
 `;
 
 export const IconItem = styled.li`
   position: relative;
   text-align: center;
+  flex: 0 0 auto;
+  margin: 0 10px;
+  max-width: 100%;
 
   a {
     display: inline-block;
@@ -55,20 +64,35 @@ export const IconItem = styled.li`
   img {
     display: block;
     object-fit: cover;
-    margin: 0 auto 10px;
-    width: 48rem;
-    height: 35rem;
+    margin: 0 auto;
+    width: 55rem;
+    height: 40rem;
     color: aquamarine;
-    border-radius: 20%;
+    border-radius: 5%;
+
+
+    @media (max-width: 1600px) {
+      width: 35rem; /* Ajuste específico para 17 polegadas */
+    }
+
+    @media (max-width: 1440px) {
+      width: 35rem;
+      height: 20rem;
+    }
+
+    @media (max-width: 1024px) {
+      width: 25rem;
+      height: 20rem;
+    }
 
     @media (max-width: 768px) {
-      width: 36rem;
-      height: 26.25rem; /* Mantém a proporção */
+      width: 30rem;
+      height: 20rem;
     }
 
     @media (max-width: 480px) {
-      width: 24rem;
-      height: 17.5rem; /* Mantém a proporção */
+      width: 18rem;
+      height: 20rem;
     }
   }
 
@@ -78,14 +102,22 @@ export const IconItem = styled.li`
     position: absolute;
     bottom: 0;
     left: 0;
+    font-weight: bold;
+    font-size: 2rem;
     width: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente */
-    padding: 10px 0; /* Ajuste conforme necessário */
-    text-align: center;
-    border-radius: 0 0 40% 40%; /* Bordas arredondadas combinando com a imagem */
-    margin-bottom: 1.0rem;
-    overflow: hidden; /* Adicionado */
-    max-width: 100%; /* Adicionado */
+    padding: 10px 0;
+    margin-left: 1rem;
+    text-align: start;
+    border-radius: 0 0 15% 15%;
+    overflow: hidden;
+
+    @media (max-width: 768px) {
+      font-size: 1.5rem;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 1rem;
+    }
   }
 
   span:hover {
@@ -112,6 +144,7 @@ export const Arrow = styled.img`
 export const BannerSlider = styled.div`
   background: transparent;
   width: 100%;
+  display: block;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -123,9 +156,5 @@ export const BannerSlider = styled.div`
 
   @media (max-width: 480px) {
     width: 100%;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin: 0 auto;
   }
 `;
